@@ -1,0 +1,9 @@
+weirdshape.exe
+*.obj
+*.o
+*.ilk
+*.pdb
+*.exp
+*.lib
+winlibs.zip
+w64devkit/
