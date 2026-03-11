@@ -1,36 +1,32 @@
 # Weird Shape Win32 App
 
-Pure C Win32 desktop app with an oval Win32 window and a native close button.
+Pure C Win32 experiments for non-rectangular windows.
 
-## Files
+## Folders
 
-- `main.c` - Win32 API app source.
-- `build.bat` - Builds with the bundled `w64devkit`, MSVC, or MinGW-w64 GCC.
+- `basic/` - simple oval window with a native `CLOSE` button.
+- `drivenbyimage/` - shape generated from `shape.bmp` using `SetWindowRgn`.
+- `w64devkit/` - optional bundled toolchain used by the local build scripts.
 
 ## Build
 
-From a Windows terminal in this folder:
+From a Windows terminal, build inside the example folder you want:
 
 ```bat
+cd basic
 build.bat
 ```
 
-This creates `weirdshape.exe`.
+or:
+
+```bat
+cd drivenbyimage
+build.bat
+```
 
 ## Run
 
-```bat
-weirdshape.exe
-```
+## Examples
 
-## Controls
-
-- Left mouse drag - move the window.
-- Native `CLOSE` button - close the app.
-- Right click - close the app.
-- `Esc` - close the app.
-
-## Notes
-
-- The window shape is applied with `SetWindowRgn` using an ellipse region.
-- The current app uses the default window background and no custom painting.
+- `basic/weirdshape.exe` - default background oval window.
+- `drivenbyimage/imagedshape.exe` - window region driven by image pixels.

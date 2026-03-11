@@ -1,4 +1,6 @@
 weirdshape.exe
+basic/weirdshape.exe
+drivenbyimage/imagedshape.exe
 *.obj
 *.o
 *.ilk
