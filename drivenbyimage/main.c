@@ -89,7 +89,7 @@ static void ApplyImageShape(HWND hwnd) {
 
 static void LayoutControls(HWND hwnd) {
     HWND button = GetDlgItem(hwnd, IDC_CLOSE);
-    if (button) MoveWindow(button, 12, 12, 90, 32, TRUE);
+    if (button) MoveWindow(button, 70, 70, 120, 50, TRUE);
 }
 
 static void PaintBitmap(HWND hwnd) {
@@ -114,7 +114,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
             return -1;
         }
         CreateWindowA("BUTTON", "CLOSE", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
-            0, 0, 90, 32, hwnd, (HMENU)(INT_PTR)IDC_CLOSE,
+            70, 70, 120, 50, hwnd, (HMENU)(INT_PTR)IDC_CLOSE,
             ((LPCREATESTRUCTA)lParam)->hInstance, NULL);
         SetWindowPos(hwnd, NULL, 0, 0, gBitmapW, gBitmapH, SWP_NOMOVE | SWP_NOZORDER);
         ApplyImageShape(hwnd);
