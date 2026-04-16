@@ -145,7 +145,7 @@ void ChooseNextAction(MascotApp *app) {
     }
 }
 
-void UpdateMovement(MascotApp *app) {
+void UpdateMovement(MascotApp *app){
     int speed = 0;
     int maxX;
     if (!app) return;
@@ -303,7 +303,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         if (wParam == kTimerId && app) {
             UpdateMovement(app);
             AdvanceAnimation(app);
-            SnapToGround(app);
+            if(!app->dragging) SnapToGround(app);
             RenderMascot(app);
         }
         return 0;
